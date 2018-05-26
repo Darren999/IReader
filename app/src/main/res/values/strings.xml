@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">IReader</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="aboutContent">IReader阅读是专注于提供更舒适的阅读体验,主打本地阅读,操作方式简单易上手,目前支持txt格式。</string>
+
 </resources>
