@@ -2,18 +2,21 @@ package com.darren.ireader;
 
 
 import android.content.Intent;
-import android.support.annotation.IdRes;
+import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import com.darren.ireader.filechooser.FileChooserActivity;
 
 public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
     private NavigationView navigationView;
     private Toolbar toolbar;
     private DrawerLayout drawer_layout;
+    private FloatingActionButton fab;
 
 
     @Override
@@ -26,9 +29,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         System.out.println("MainActivity initData");
         drawer_layout = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-
-
+        toolbar = (Toolbar) findViewById(R.id.ab_toolbar);
+        fab = (FloatingActionButton)findViewById(R.id.fab);
+        
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_menu_white_24dp);
 
@@ -45,6 +48,14 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         drawer_layout.addDrawerListener(toggle);
 
         navigationView.setNavigationItemSelectedListener(this);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FileChooserActivity.class);
+                MainActivity.this.startActivity(intent);
+            }
+        });
 
     }
 

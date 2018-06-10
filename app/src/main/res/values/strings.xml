@@ -4,4 +4,9 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="aboutContent">IReader阅读是专注于提供更舒适的阅读体验,主打本地阅读,操作方式简单易上手,目前支持txt格式。</string>
 
+    <string name="press_twice_to_exit">连续点击才能退出</string>
+    <string name="root">根目录</string>
+    <string name="add_files">加入书架</string>
+    <string name="choose_all">全选</string>
+    <string name="delete">取消</string>
 </resources>
